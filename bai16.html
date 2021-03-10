@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{ width: 100%}
+    </style>
+    <script type=""></script>
+</head>
+<body>
+<table border="1" cellpadding="20px" >
+    <tr>
+        <td colspan="4" style="position: relative; height: 100px" >
+            <h5 id="phepTinh" style="margin: 0 ; padding: 0 ;position: absolute; right: 25px ;top: 20px"></h5>
+            <h1 id="result" style="margin: 0 ; padding: 0;position: absolute; right: 25px"></h1>
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td><button id='btnngoacmo' onclick="click1('btnngoacmo')">(</button></td>
+        <td><button id='btnngoacdong' onclick="click1('btnngoacdong')">)</button></td>
+        <td><button id='btnphantram' onclick="click1('btnphantram')">%</button></td>
+        <td><button onclick="reset()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button id='btn7' onclick="click1('btn7')">7</button></td>
+        <td><button id='btn8' onclick="click1('btn8')">8</button></td>
+        <td><button id='btn9' onclick="click1('btn9')">9</button></td>
+        <td><button id='btnChia' onclick="click1('btnChia')">/</button></td>
+
+    </tr>
+    <tr>
+        <td><button id='btn4' onclick="click1('btn4')">4</button></td>
+        <td><button id='btn5' onclick="click1('btn5')">5</button></td>
+        <td><button id='btn6' onclick="click1('btn6')">6</button></td>
+        <td><button id='btnNhan' onclick="click1('btnNhan')">*</button></td>
+    </tr>
+    <tr>
+        <td><button id='btn1' onclick="click1('btn1')">1</button></td>
+        <td><button id='btn2' onclick="click1('btn2')">2</button></td>
+        <td><button id='btn3' onclick="click1('btn3')">3</button></td>
+        <td><button id='btnTru' onclick="click1('btnTru')">-</button></td>
+    </tr>
+    <tr>
+        <td><button id='btn0' onclick="click1('btn0')">0</button></td>
+        <td><button id='btncham' onclick="click1('btncham')">.</button></td>
+        <td><button onclick="result()">=</button></td>
+        <td><button id='btnCong' onclick="click1('btnCong')">+</button></td>
+    </tr>
+</table>
+    <script>
+        let a = ''
+
+        function click1(id){
+            a += document.getElementById(id).innerHTML
+            document.getElementById('phepTinh').innerHTML = a
+        }
+
+        function result(){
+            document.getElementById('result').innerHTML = eval(a)
+            a = ''
+        }
+
+        function reset(){
+            document.getElementById('phepTinh').innerHTML = ''
+            document.getElementById('result').innerHTML = ''
+            a = ''
+        }
+    </script>
+
+</body>
+</html>
